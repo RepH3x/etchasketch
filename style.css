@@ -10,7 +10,7 @@ body {
 
 #buttonWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 800px;
   min-width: 800px;
   padding: 16px 0px;

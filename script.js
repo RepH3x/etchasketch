@@ -2,6 +2,7 @@
 let grid = document.querySelector("#gridWrapper");
 let resetButton = document.querySelector("#reset");
 let colorSelect = document.querySelector("#color");
+let opacitySelect = document.querySelector("#opacity");
 
 //setup global variables
 const DEFAULT_GRID_WIDTH = 16;
@@ -57,7 +58,8 @@ function processInput(input) {
 
 function handleMouseover(gridPiece) {
   gridPiece.style.background = determineColor(gridPiece);
-  let newOpacity = parseFloat(gridPiece.style.opacity) + 0.1;
+  let newOpacity = parseFloat(gridPiece.style.opacity) + parseFloat(opacitySelect.value);
+  if(newOpacity > 1) { newOpacity = 1; }
   gridPiece.style.opacity = ""+newOpacity;
 }
 
